@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>React JSX</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel" data-type="module">
+    import React from "https://esm.sh/react@19";
+    import ReactDOM from "https://esm.sh/react-dom@19/client";
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+
+    function App() {
+      return (
+        <div>
+          <h1>I was made with JSX</h1>
+          <p>This looks like regular HTML, but it's actually JSX!</p>
+          <button>Click Me</button>
+        </div>
+      );
+    }
+
+    root.render(<App />);
+  </script>
+</body>
+</html>
